@@ -54,7 +54,7 @@ We conduct experiments on 7 datasets:
 
 ## :gift: ​Acknowledgements
 
-In building the AGCD codebase, we reference the following two repositories: [SimGCD](https://github.com/CVMI-Lab/SimGCD)
+In building the AGCD codebase, we reference [SimGCD](https://github.com/CVMI-Lab/SimGCD).
 
 
 
