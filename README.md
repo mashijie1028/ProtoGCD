@@ -60,7 +60,7 @@ In building the AGCD codebase, we reference the following two repositories: [Sim
 
 ## :white_check_mark: ​License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/mashijie1028/ActiveGCD/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/mashijie1028/ProtoGCD/blob/main/LICENSE) file for details.
 
 
 
