@@ -28,7 +28,33 @@ We conduct experiments on 7 datasets:
 * Generic datasets: CIFAR-10, CIFAR-100, ImageNet-100
 * Fine-grained datasets: [CUB](https://drive.google.com/drive/folders/1kFzIqZL_pEBVR7Ca_8IKibfWoeZc3GT1), [Stanford Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html), [FGVC-Aircraft](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/), [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
 
-### Training
+### Training ProtoGCD
+
+CIFAR100:
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python train_fix.py --dataset_name 'cifar100' --batch_size 128 --epochs 200 --num_workers 4 --use_ssb_splits --weight_decay 5e-5 --lr 0.1 --eval_funcs 'v2' --weight_sup 0.35 --weight_entropy_reg 2 --weight_proto_sep 0.1 --temp_logits 0.1 --temp_teacher_logits 0.05 --wait_ratio_epochs 0 --ramp_ratio_teacher_epochs 100 --init_ratio 0.0 --final_ratio 1.0 --exp_name cifar100_protogcd
+```
+
+CUB:
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python train_fix.py --dataset_name 'cub' --batch_size 128 --epochs 200 --num_workers 2 --use_ssb_splits --weight_decay 5e-5 --lr 0.1 --eval_funcs 'v2' --weight_sup 0.35 --weight_entropy_reg 2 --weight_proto_sep 0.05 --temp_logits 0.1 --temp_teacher_logits 0.05 --wait_ratio_epochs 0 --ramp_ratio_teacher_epochs 100 --init_ratio 0.0 --final_ratio 1.0 --exp_name cub_protogcd
+```
+
+### Evaluate OOD detection
+
+CIFAR:
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python test_ood_cifar.py --dataset_name 'cifar100' --batch_size 128 --num_workers 4 --use_ssb_splits --num_to_avg 10 --score msp --ckpts_date YOUR_CKPTS_NAME --temp_logits 0.1
+```
+
+ImageNet:
+
+```shell
+CUDA_VISIBLE_DEVICES=0 python test_ood_imagenet.py --dataset_name 'imagenet_100' --batch_size 128 --num_workers 4 --use_ssb_splits --num_to_avg 10 --score msp --ckpts_date YOUR_CKPTS_NAME --temp_logits 0.1
+```
 
 
 
@@ -54,7 +80,7 @@ We conduct experiments on 7 datasets:
 
 ## :gift: ​Acknowledgements
 
-In building the AGCD codebase, we reference [SimGCD](https://github.com/CVMI-Lab/SimGCD).
+In building the ProtoGCD codebase, we reference [SimGCD](https://github.com/CVMI-Lab/SimGCD).
 
 
 
