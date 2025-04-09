@@ -28,6 +28,10 @@ We conduct experiments on 7 datasets:
 * Generic datasets: CIFAR-10, CIFAR-100, ImageNet-100
 * Fine-grained datasets: [CUB](https://drive.google.com/drive/folders/1kFzIqZL_pEBVR7Ca_8IKibfWoeZc3GT1), [Stanford Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html), [FGVC-Aircraft](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/), [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
 
+### Config
+
+Set paths to datasets in `config.py`
+
 ### Training ProtoGCD
 
 CIFAR100:
@@ -55,8 +59,6 @@ ImageNet:
 ```shell
 CUDA_VISIBLE_DEVICES=0 python test_ood_imagenet.py --dataset_name 'imagenet_100' --batch_size 128 --num_workers 4 --use_ssb_splits --num_to_avg 10 --score msp --ckpts_date YOUR_CKPTS_NAME --temp_logits 0.1
 ```
-
-
 
 
 
