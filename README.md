@@ -65,16 +65,15 @@ CUDA_VISIBLE_DEVICES=0 python test_ood_imagenet.py --dataset_name 'imagenet_100'
 ## :clipboard: ​Citing this work
 
 ```bibtex
-@ARTICLE{10948388,
+@article{ma2025protogcd,
+  title={ProtoGCD: Unified and Unbiased Prototype Learning for Generalized Category Discovery},
   author={Ma, Shijie and Zhu, Fei and Zhang, Xu-Yao and Liu, Cheng-Lin},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={ProtoGCD: Unified and Unbiased Prototype Learning for Generalized Category Discovery}, 
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume={47},
+  number={07},
+  pages={6022--6038},
   year={2025},
-  volume={},
-  number={},
-  pages={1-17},
-  keywords={Prototypes;Adaptation models;Contrastive learning;Training;Magnetic heads;Feature extraction;Estimation;Automobiles;Accuracy;Pragmatics;Generalized category discovery;open-world learning;prototype learning;semi-supervised learning},
-  doi={10.1109/TPAMI.2025.3557502}
+  publisher={IEEE Computer Society}
 }
 ```
 
